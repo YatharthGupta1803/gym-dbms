@@ -7,12 +7,14 @@ A polished full-stack Gym Management System combining a modern React admin dashb
 ## 🚀 Project Overview
 
 This repository is a complete solution for gym operations:
+
 - Manage members, trainers, payment plans, attendance, and invoices
 - Enable facial recognition-based member check-ins
 - Maintain secure login for administrators
 - Support real-time analytics and attendance history
 
 It integrates three major application layers:
+
 1. **Frontend**: React + Vite + TailwindCSS
 2. **Backend API**: Node.js + Express + PostgreSQL
 3. **AI Face Server**: Python + Flask + OpenCV
@@ -76,6 +78,7 @@ gym-dbms/
 ## 📦 Setup Instructions
 
 ### Prerequisites
+
 - Node.js 18+
 - Python 3.10+
 - Docker (recommended for PostgreSQL)
@@ -124,22 +127,38 @@ The frontend should be available on `http://localhost:5173`.
 
 ---
 
-## 🔧 Database Schema Explained
+## � Project Screenshots
+
+### Frontend Application
+![Frontend Login](docs/frontend-login.png)
+
+### Backend API Running
+![Backend API](docs/backend-root.png)
+
+### Database Schema
+![Database Schema](docs/database-schema.png)
+
+---
+
+## �🔧 Database Schema Explained
 
 The database schema is defined in `database/schema.sql` and includes the following tables:
 
 ### `plans`
+
 - `id`: Primary key
 - `name`: Plan name (Monthly, Quarterly, Yearly)
 - `duration_months`: Plan duration in months
 - `price`: Cost of the plan
 
 ### `trainers`
+
 - `id`: Primary key
 - `name`, `phone`, `specialization`
 - Tracks gym trainer assignments
 
 ### `members`
+
 - `id`: Primary key
 - `name`, `age`, `gender`, `phone`
 - `plan_id`: FK to `plans`
@@ -149,6 +168,7 @@ The database schema is defined in `database/schema.sql` and includes the followi
 - `status`: Active or inactive membership
 
 ### `attendance`
+
 - `id`: Primary key
 - `member_id`: FK to `members`
 - `check_in_time`: timestamp of attendance
@@ -156,17 +176,20 @@ The database schema is defined in `database/schema.sql` and includes the followi
 - `confidence_score`: matching confidence from facial recognition
 
 ### `payments`
+
 - `id`: Primary key
 - `member_id`: FK to `members`
 - `amount`, `payment_date`, `status`
 - `invoice_path`: optional path for invoice storage
 
 ### `admins`
+
 - `id`: Primary key
 - `username`, `password_hash`
 - Default admin created in initialization script
 
 ### Key relationships
+
 - `members.plan_id` → `plans.id`
 - `members.trainer_id` → `trainers.id`
 - `attendance.member_id` → `members.id`
@@ -196,12 +219,14 @@ This schema is optimized for gym operations, supporting attendance, membership p
 ---
 
 ## 💡 Default Login
+
 - Username: `admin`
 - Password: `admin123`
 
 ---
 
 ## Next Steps
+
 - Add encrypted file storage for invoices
 - Improve face recognition matching thresholds
 - Add member check-out and subscription renewal automation
