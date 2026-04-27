@@ -127,15 +127,34 @@ The frontend should be available on `http://localhost:5173`.
 
 ---
 
-## � Project Screenshots
+## 📸 Project Screenshots
 
-### Frontend Application
+### Frontend Login
+
 ![Frontend Login](docs/frontend-login.png)
 
+### Frontend Dashboard
+
+![Frontend Dashboard](docs/frontend-dashboard.png)
+
+### Members Page
+
+![Members Page](docs/frontend-members.png)
+
+### Face Check-In Page
+
+![Face Check-In](docs/frontend-facecheckin.png)
+
+### Attendance Page
+
+![Attendance Page](docs/frontend-attendance.png)
+
 ### Backend API Running
+
 ![Backend API](docs/backend-root.png)
 
 ### Database Schema
+
 ![Database Schema](docs/database-schema.png)
 
 ---
