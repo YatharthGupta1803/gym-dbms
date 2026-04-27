@@ -1,0 +1,28 @@
+# Node.js dependencies
+/backend/node_modules
+/frontend/node_modules
+
+# Python virtual environments
+/venv
+/face_server/venv
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+
+# Vite build output
+/frontend/dist
+
+# Environment files
+*.env
+backend/.env
+frontend/.env
+face_server/.env
+
+# Docker
+docker-compose.override.yml

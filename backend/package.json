@@ -1,0 +1,24 @@
+{
+  "name": "gym-dbms-backend",
+  "version": "1.0.0",
+  "description": "Gym Backend System",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.5",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
